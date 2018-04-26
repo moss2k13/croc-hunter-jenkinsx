@@ -22,7 +22,6 @@ pipeline {
           dir ('/home/jenkins/go/src/github.com/carlossg/croc-hunter-jenkinsx') {
             checkout scm
             container('go') {
-              sh "env | sort"
               sh "make VERSION=\$PREVIEW_VERSION GIT_COMMIT=\$GIT_COMMIT linux"
               sh "export VERSION=\$PREVIEW_VERSION && skaffold run -f skaffold.yaml.new"
             }
