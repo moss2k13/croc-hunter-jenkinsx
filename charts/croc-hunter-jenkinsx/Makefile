@@ -1,4 +1,4 @@
-CHART_REPO := http://jenkins-x-chartmuseum:8080
+CHART_REPO := http://chartmuseum.jx.pmossak.eu
 CURRENT=$(pwd)
 NAME := croc-hunter-jenkinsx
 OS := $(shell uname)
